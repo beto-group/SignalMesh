@@ -1,5 +1,6 @@
 {
   "action": "reload",
   "timestamp": 1780268912,
-  "executed": false
+  "executed": true,
+  "executedAt": "2026-05-31T23:01:00.585Z"
 }

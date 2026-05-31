@@ -165,6 +165,14 @@ async function loadScript(dc, src, options = {}) {
         scriptContent = await adapter.read(src);
       }
 
+      // Resolve any absolute path redirects in scriptContent (cached or fetched) before execution
+      if (scriptContent && scriptContent.includes('from "/')) {
+        console.log(`[LoadScript] 🔄 Resolving absolute esm.sh paths in scriptContent...`);
+        scriptContent = scriptContent.replace(/from\s+["'](\/[^"']+)["']/g, function (match, path) {
+          return 'from "https://esm.sh' + path + '"';
+        });
+      }
+
       // Step 2: Execute based on type
       let result;
 

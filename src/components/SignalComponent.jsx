@@ -4,7 +4,7 @@
  * Converted to standard function syntax and themed with Obsidian CSS variables.
  */
 function SignalComponent(props) {
-    const { dc, loadScript, isFullTab, isInception, onToggleFullTab, styles, onCodeReloadRequest } = props;
+    const { dc, loadScript, isFullTab, isInception, onToggleFullTab, styles, onCodeReloadRequest, folderPath } = props;
     const { useState, useEffect, useRef } = dc;
 
     const canvasContainerRef = useRef(null);
@@ -65,12 +65,12 @@ function SignalComponent(props) {
                 await new Promise(function (r) { setTimeout(r, 50); });
 
                 // 2. Load Modules
-                const THREE = await loadScript(dc, 'https://unpkg.com/three@0.160.0/build/three.module.js', { type: 'module', globalName: 'THREE' });
-                const { GUI } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/libs/lil-gui.module.min.js', { type: 'module' });
-                const { OrbitControls } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js', { type: 'module' });
-                const { EffectComposer } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/EffectComposer.js', { type: 'module' });
-                const { RenderPass } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/RenderPass.js', { type: 'module' });
-                const { UnrealBloomPass } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/UnrealBloomPass.js', { type: 'module' });
+                const THREE = await loadScript(dc, 'https://unpkg.com/three@0.160.0/build/three.module.js', { type: 'module', globalName: 'THREE', cacheDir: folderPath + '/data/cache/scripts' });
+                const { GUI } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/libs/lil-gui.module.min.js', { type: 'module', cacheDir: folderPath + '/data/cache/scripts' });
+                const { OrbitControls } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js', { type: 'module', cacheDir: folderPath + '/data/cache/scripts' });
+                const { EffectComposer } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/EffectComposer.js', { type: 'module', cacheDir: folderPath + '/data/cache/scripts' });
+                const { RenderPass } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/RenderPass.js', { type: 'module', cacheDir: folderPath + '/data/cache/scripts' });
+                const { UnrealBloomPass } = await loadScript(dc, 'https://unpkg.com/three@0.160.0/examples/jsm/postprocessing/UnrealBloomPass.js', { type: 'module', cacheDir: folderPath + '/data/cache/scripts' });
 
                 if (!active) return;
                 setIsLoaded(true);

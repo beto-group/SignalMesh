@@ -19,8 +19,7 @@ function App(props) {
                 ]);
 
                 // Initialize LoadScriptUpgrade
-                const { getLoader } = loadScriptModule;
-                const { loadScript } = getLoader(folderPath);
+                const { loadScript } = loadScriptModule;
 
                 setModules({
                     STYLES: stylesModule.STYLES,

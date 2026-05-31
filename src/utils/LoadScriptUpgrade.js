@@ -123,12 +123,25 @@ async function loadScript(dc, src, options = {}) {
         if (scriptContent === null) {
           console.log(`[LoadScript] 🌐 Fetching from network: ${src}`);
           const response = await fetch(src);
-          
           if (!response.ok) {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
           }
-          
           scriptContent = await response.text();
+
+          // Resolve esm.sh redirect stubs to their final fully-bundled absolute files
+          if (scriptContent.startsWith('/* esm.sh -') && scriptContent.includes('from "/')) {
+            const match = scriptContent.match(/from "(\/[^"]+)"/);
+            if (match) {
+              const finalPath = match[1];
+              const finalUrl = 'https://esm.sh' + finalPath;
+              console.log(`[LoadScript] 🔄 Resolving esm.sh redirect to: ${finalUrl}`);
+              const finalResponse = await fetch(finalUrl);
+              if (!finalResponse.ok) {
+                throw new Error(`HTTP ${finalResponse.status}: ${finalResponse.statusText}`);
+              }
+              scriptContent = await finalResponse.text();
+            }
+          }
 
           // Write to cache
           if (cache) {

@@ -1,6 +1,6 @@
 /**
  * SIGNAL MESH - Index View Factory
- * Bootstrap loader with HMR polling daemon.
+ * Integrates FullTab stylesheet suppressor and reload command listener.
  */
 async function View({ folderPath, isInception, dc, ...props }) {
     const STYLE_ID = "impeccable-status-signalmesh";
@@ -33,6 +33,46 @@ async function View({ folderPath, isInception, dc, ...props }) {
         const [appComponent, setAppComponent] = dc.useState(null);
         const [error, setError] = dc.useState(null);
         const [key, setKey] = dc.useState(0);
+        const [isFullTab, setIsFullTab] = dc.useState(!isInception);
+
+        const toggleFullTab = function () {
+            if (isInception) return;
+            setIsFullTab(function (prev) { return !prev; });
+        };
+
+        // --- Immersive FullTab: Status Bar & Footer Suppression ---
+        dc.useEffect(function () {
+            if (!isFullTab || isInception) {
+                const el = document.getElementById(STYLE_ID);
+                if (el) el.remove();
+                return;
+            }
+
+            let styleEl = document.getElementById(STYLE_ID);
+            if (!styleEl) {
+                styleEl = document.createElement("style");
+                styleEl.id = STYLE_ID;
+                styleEl.innerHTML = `
+                    /* SIGNAL MESH: Hide global status bar and view footers for immersive full-tab layout */
+                    body > .app-container .status-bar,
+                    .view-footer,
+                    .workspace-leaf-content-footer {
+                        display: none !important;
+                    }
+                    .workspace-leaf-content {
+                        padding: 0 !important;
+                        margin: 0 !important;
+                        border-radius: 0 !important;
+                    }
+                `;
+                document.head.appendChild(styleEl);
+            }
+
+            return function () {
+                const el = document.getElementById(STYLE_ID);
+                if (el) el.remove();
+            };
+        }, [isFullTab, isInception]);
 
         // --- Agent Watch Daemon ---
         dc.useEffect(function () {
@@ -77,11 +117,13 @@ async function View({ folderPath, isInception, dc, ...props }) {
 
         const MainApp = appComponent;
         return (
-            <div id="datacore-component-root" style={{ width: "100%", height: "100%", overflow: "hidden" }}>
+            <div id="datacore-component-root" style={{ width: "100%", height: isFullTab && !isInception ? "100%" : "600px", overflow: "hidden" }}>
                 <MainApp
                     folderPath={folderPath}
                     dc={dc}
+                    isFullTab={isFullTab && !isInception}
                     isInception={isInception}
+                    onToggleFullTab={toggleFullTab}
                     {...props}
                 />
             </div>

@@ -4,12 +4,10 @@ cssclasses:
 ---
 
 ```datacorejsx
-// Always resolve the folder path relative to THIS component file,
-// not the currently active leaf (which changes with Full Tab mode).
-const componentFile = dc.resolvePath("");
-const folderPath = componentFile.substring(0, componentFile.lastIndexOf('/'));
-console.log("[SignalMesh] Component folderPath resolved as:", folderPath);
+const activeFile = "_RESOURCES/DATACORE/_DONE/SIGNAL MESH/src/index.jsx";
+const folderPath = "_RESOURCES/DATACORE/_DONE/SIGNAL MESH";
+console.log("[SignalMesh] Component folderPath absolute resolved as:", folderPath);
 
-const { View } = await dc.require(folderPath + "/src/index.jsx");
+const { View } = await dc.require(activeFile);
 return await View({ folderPath, dc });
 ```

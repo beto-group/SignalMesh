@@ -2,6 +2,7 @@
  * SignalComponent.jsx — Three.js WebGL and custom GLSL shader particle mesh visualizer.
  * Displays moving light signals inside 3D form factors (Cube, Sphere, Pyramid, Hexagon, Torus).
  * Converted to standard function syntax and themed with Obsidian CSS variables.
+ * Originally ported/adapted from a creative experiment on CodePen.
  */
 function SignalComponent(props) {
     const { dc, loadScript, isFullTab, isInception, onToggleFullTab, styles, onCodeReloadRequest, folderPath } = props;

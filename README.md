@@ -85,6 +85,12 @@ Welcome to **Signal Mesh**, a stunning WebGL particle network visualizer designe
 
 ---
 
+## 🌟 Attribution
+
+The visual and mathematical core of the procedural light flow and line segments geometry in this project was ported and adapted from a creative experiment originally published on [CodePen](https://codepen.io/).
+
+---
+
 ## ⚖️ License
 
 This project is licensed under the MIT License — see the [`LICENSE.md`](LICENSE.md) file for details.

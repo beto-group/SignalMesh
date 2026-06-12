@@ -1,13 +1,6 @@
----
-cssclasses:
-  - bfv-container
----
-
 ```datacorejsx
-const activeFile = dc.resolvePath("_RESOURCES/DATACORE/_DONE/SIGNAL MESH/src/index.jsx");
-const folderPath = activeFile.substring(0, activeFile.lastIndexOf('/src'));
-console.log("[SignalMesh] Component folderPath absolute resolved as:", folderPath);
-
-const { View } = await dc.require(activeFile);
+const currentFilePath = dc.useCurrentPath();
+const folderPath = currentFilePath ? currentFilePath.substring(0, currentFilePath.lastIndexOf("/")) : "";
+const { View } = await dc.require(folderPath + "/src/index.jsx");
 return await View({ folderPath, dc });
 ```

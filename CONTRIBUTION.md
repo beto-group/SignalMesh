@@ -1,6 +1,36 @@
-# Contribution Guidelines
+# Contribution Guidelines — Signal Mesh
 
-We welcome contributions to this Datacore component!
+Welcome! This component is part of the BetoOS Datacore library. Please adhere to the following architectural standards.
+
+## Codebase Architecture
+
+The module utilizes a split-file structure to guarantee legibility, testability, and isolated execution scopes:
+
+```text
+SignalMesh/
+├── SIGNAL MESH.md         # Obsidian entry point
+├── METADATA.md            # Component manifest
+├── README.md              # Documentation
+├── CONTRIBUTION.md        # This file
+├── LICENSE.md             # MIT license
+├── data/
+│   └── mcp_commands.json  # Hot reload trigger
+├── assets/
+│   ├── image/
+│   │   └── preview_1.webp  # Static preview image
+│   └── videos/
+│       └── preview.gif     # Immersive preview clip
+└── src/
+    ├── index.jsx          # Bootstrapper & reload daemon
+    ├── App.jsx            # View coordinator loading dependencies
+    ├── components/
+    │   └── SignalComponent.jsx # Particle network WebGL visualizer
+    ├── styles/
+    │   └── styles.jsx     # CSS property bindings
+    └── utils/
+        ├── domUtils.jsx   # Workspace leaf node locators
+        └── LoadScriptUpgrade.js # CDN script local cache manager
+```
 
 ## Local Development Workflow
 

@@ -1,33 +1,35 @@
 ---
 author: beto.group
 contributor: []
-version: 1.0.0
-id: signal-mesh-215
-name: SIGNAL MESH
-description: A Three.js WebGL and custom GLSL shader particle mesh visualizer. Displays customizable 3D forms (Hexagon, Sphere, Pyramid, Torus, Cube) with native Obsidian variables and themed lil-gui controls.
+version: 2.0.0
+id: signal-mesh-219
+name: SignalMesh
+description: A stunning WebGL particle network visualizer generating procedural, self-connecting line segments topology in real time with post-processing bloom.
 status: stable
-complexity: advanced
+complexity: plug-n-play
 category:
   - visualizer
+tags:
   - webgl
-  - 3d
+  - particle
+  - threejs
+  - visualizer
+  - custom-shader
 compatibility:
   - Obsidian >=1.5.0
 repository:
   - https://github.com/beto-group/SignalMesh
 missing: []
 resources:
-  - assets/signal_mesh.webp
-  - assets/signalmesh.clip.gif
+  - assets/image/preview_1.webp
+  - assets/videos/preview.gif
 type: DatacoreComponent
 target: Datacore
 security:
   - Vault
-  - NodeFS
-  - Network
 storage:
   - File
-network: Online (Caching)
+network: Offline (No external connections)
 runtime: React
 entry_point: SIGNAL MESH.md
 logic: src/index.jsx

@@ -13,8 +13,8 @@
   <br/>
   <!-- BOTTOM GOLD TAXONOMY -->
   <img src="https://img.shields.io/badge/TARGET-DATACORE-000?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkUxNjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48ZWxsaXBzZSBjeD0iMTIiIGN5PSI1IiByeD0iOSIgcnk9IjMiLz48cGF0aCBkPSJNIDMgNXYxNGE5IDMgMCAwIDAgMTggMHYtMTQiLz48cGF0aCBkPSJNIDMgMTJhOSAzIDAgMCAwIDE4IDAiLz48L3N2Zz4%3D" alt="TARGET">
-  <img src="https://img.shields.io/badge/SECURITY-VAULT__NODE__NETWORK-000?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkUxNjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgMjJzOC00LjUgOC0xMlYzbC04LTMtOCAzdjdjMCA3LjUgOCAxMiA4IDEyeiIvPjwvc3ZnPg==" alt="SECURITY">
-  <img src="https://img.shields.io/badge/RUNTIME-REACT-000?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkUxNjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBkPSJNMTUgMkg2YTIgMiAwIDAgMC0yIDJ2MTZhMiAyIDAgMCAwIDIgMmgxMmEyIDAgMCAwIDAgMi-yVjdaIi8+CiAgPHBhdGggZD0iTTE0IDJ2NGEyIDIgMCAwIDAgMiAyaDQiLz4KICA8cGF0aCBkPSJtMTAgMTMtMyAzIDMgMyIvPgogIDxwYXRoIGQ9Im0xNCAxOSAzLTMtMy0zIi8+Cjwvc3ZnPg==" alt="RUNTIME">
+  <img src="https://img.shields.io/badge/SECURITY-VAULT__NODE__NETWORK-000?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkUxNjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTEiIHg9IjMiIHk9IjExIiByeD0iMiIgcnk9IjIiLz48cGF0aCBkPSJNNyAxMVY3YTUgNSAwIDAgMSAxMCAwdjQiLz48L3N2Zz4%3D" alt="SECURITY">
+  <img src="https://img.shields.io/badge/RUNTIME-REACT-000?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkUxNjUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIyIi8%2BPHBhdGggZD0iTTEyIDJhMTAgMTAgMCAwIDEgMCAyMCIvPjxwYXRoIGQ9Ik0xMiAyYTEwIDEwIDAgMCAwIDAgMjAiLz48L3N2Zz4%3D" alt="RUNTIME">
   <hr>
 </div>
 
@@ -31,11 +31,16 @@ Welcome to **Signal Mesh**, a stunning WebGL particle network visualizer designe
 
 ---
 
-## Previews
+## Quick Start & Installation
 
-| Card Layout | Interactive WebGL Explorer |
-| :---: | :---: |
-| ![Preview 1](assets/image/preview_1.webp) | ![Walkthrough GIF](assets/videos/preview.gif) |
+1. **Get the Code**:
+   *   **Option A**: Clone directly into your Obsidian vault directory:
+       ```shell
+       git clone https://github.com/beto-group/SignalMesh
+       ```
+   *   **Option B**: Extract the repository ZIP into your Obsidian vault.
+2. **Prerequisites**: Ensure the **Datacore** community plugin is active in Obsidian.
+3. **Launch**: Open **`SIGNAL MESH.md`** inside Obsidian.
 
 ---
 
@@ -79,16 +84,11 @@ Welcome to **Signal Mesh**, a stunning WebGL particle network visualizer designe
 
 ---
 
-## Quick Start & Installation
+## Previews
 
-1. **Get the Code**:
-   *   **Option A**: Clone directly into your Obsidian vault directory:
-       ```shell
-       git clone https://github.com/beto-group/SignalMesh
-       ```
-   *   **Option B**: Extract the repository ZIP into your Obsidian vault.
-2. **Prerequisites**: Ensure the **Datacore** community plugin is active in Obsidian.
-3. **Launch**: Open **`SIGNAL MESH.md`** inside Obsidian.
+| Card Layout | Interactive WebGL Explorer |
+| :---: | :---: |
+| ![Preview 1](assets/image/preview_1.webp) | ![Walkthrough GIF](assets/videos/preview.gif) |
 
 ---
 
